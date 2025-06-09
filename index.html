@@ -2,58 +2,126 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Courses Offered - Infomax</title>
+    <title>Checkerboard</title>
     <style>
         body {
-            background-color: #fff8dc;
-            font-family: Arial, sans-serif;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
             margin: 0;
-            padding: 0;
         }
 
-        h1 {
-            background-color: orange;
-            color: white;
-            padding: 20px;
-            margin: 0;
-            font-size: 36px;
-            letter-spacing: 2px;
+        .board {
+            display: grid;
+            grid-template-columns: repeat(8, 50px);
+            grid-template-rows: repeat(8, 50px);
+            border: 4px solid black;
         }
 
-        .image-container {
-            margin-top: 40px;
+        .cell {
+            width: 50px;
+            height: 50px;
         }
 
-        .image-container img {
-            width: 300px;
-            max-width: 80%;
-            border: 5px solid orange;
-            border-radius: 20px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        .black {
+            background-color: black;
         }
 
-        .footer {
-            margin-top: 30px;
-            font-size: 16px;
-            color: #333;
+        .pink {
+            background-color: pink;
         }
     </style>
 </head>
 <body>
 
-    <h1>Courses We Offer</h1>
+<div class="board">
+    <!-- 8x8 = 64 squares -->
+    <!-- Alternate between black and pink -->
+    <!-- Even rows start with black, odd rows with pink -->
+    <!-- We'll use JS to avoid hardcoding all 64 squares, but here’s a pure HTML+CSS version with all blocks -->
 
-    <div class="image-container">
-        <img src="https://tse3.mm.bing.net/th?id=OIP.3GFSUuHxnUV5I3Pf59PmygHaJq&pid=Api&P=0&h=180" alt="Infomax Student">
-        <br><br>
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAMAAADqEbpSAAA..." alt="Courses - MCA BCA BBA">
-        <!-- Replace the `src` above with your own image URL if uploading online -->
-    </div>
+    <!-- You can use a tool to auto-generate this, but here's a manually written pattern -->
+    <!-- Row 1 -->
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
 
-    <div class="footer">
-        MCA | BCA | BBA - Empowering Tomorrow’s Professionals
-    </div>
+    <!-- Row 2 -->
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+    <div class="cell pink"></div>
+    <div class="cell black"></div>
+
+    <!-- Repeat until Row 8 -->
+
+    <!-- You can copy-paste the above pattern alternating accordingly 6 more times -->
+
+</div>
 
 </body>
 </html>
