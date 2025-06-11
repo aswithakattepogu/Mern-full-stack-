@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hoverable Sidenav Buttons</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .sidenav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 20px;
+    }
+
+    .sidenav a {
+      height: 50px;
+      width: 50px;
+      margin: 10px 0;
+      display: block;
+      color: white;
+      text-decoration: none;
+      text-align: left;
+      padding-left: 60px;
+      line-height: 50px;
+      position: relative;
+      transition: 0.3s;
+      border-radius: 4px 0 0 4px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .sidenav a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 50px;
+      border-radius: 4px 0 0 4px;
+    }
+
+    .sidenav a.green::before { background-color: #04AA6D; }
+    .sidenav a.blue::before  { background-color: #2196F3; }
+    .sidenav a.red::before   { background-color: #f44336; }
+    .sidenav a.gray::before  { background-color: #555; }
+
+    .sidenav a span {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .sidenav a:hover {
+      width: 200px;
+      background-color: inherit;
+    }
+
+    .sidenav a:hover span {
+      opacity: 1;
+    }
+
+    .main {
+      margin-left: 70px;
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 17px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="#" class="green"><span>Green Button</span></a>
+  <a href="#" class="blue"><span>Blue Button</span></a>
+  <a href="#" class="red"><span>Red Button</span></a>
+  <a href="#" class="gray"><span>Gray Button</span></a>
+</div>
+
+<div class="main">
+  <h2>Hoverable Sidenav Buttons</h2>
+  <p>Hover over the buttons in the left side navigation to open them.</p>
+</div>
+
+</body>
+</html>
